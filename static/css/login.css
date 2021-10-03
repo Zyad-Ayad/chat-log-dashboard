@@ -1,0 +1,77 @@
+.login-div {
+    padding: 10px;
+    margin: auto;
+    margin-top: 150px;
+    height: 100%;
+    width: 35%;
+    box-shadow: 1px 1px 20px  #000000;
+    border-radius:20px;
+
+  }
+
+/* CSS */
+.wrapper-buttons {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 250px;
+  }
+  
+  .wrapper-buttons > * {
+    margin-bottom: 10px;
+  }
+  
+  .wrapper-buttons > *:first-child {
+    margin-top: 10px;
+  }
+  
+  .wrapper-buttons > *:last-child {
+    margin-bottom: 0px;
+  }
+  
+  .blue-button
+   {
+    display: inline-block;
+    font-family: Whitney, "Open Sans", Helvetica, sans-serif;
+    font-weight: 400;
+    font-size: 11pt;
+    border-radius: 3px;
+    cursor: pointer;
+    height: 45px;
+    width: 250px;
+    box-shadow: 0 2px 6px 0 rgba(0, 0, 0, 0.2);
+  }
+  
+  .blue-button {
+    background-color: #375fe9;
+    border: 2px solid #1547f7;
+    color: #fff;
+  }
+  
+  .discount {
+    display: inline;
+    border: 1px solid hsla(0, 0%, 100%, 0.3);
+    color: hsla(0, 0%, 100%, 0.75);
+    border-radius: 3px;
+    font-size: 12px;
+    font-weight: 400;
+    margin-left: 3px;
+    padding: 3px;
+    width: 50px;
+  }
+  
+  .blue-button:hover
+  {
+    transform: translateY(1px);
+  }
+  
+  .blue-button:active
+  {
+    transform: translateY(2px);
+  }
+  
+  .blue-button
+  {
+    outline: transparent !important;
+  }
+  
