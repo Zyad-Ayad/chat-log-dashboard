@@ -1,0 +1,115 @@
+.div2 
+{
+    width: 960px;
+    background: #fff;
+    border-radius: 10px;
+    overflow: hidden;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 50px 50px 50px 50px;
+    box-shadow: 1px 10px 1px #ccc;
+}
+
+.link:link, .link:visited {
+    background-color: #3F5CFF;
+    color: white;
+    padding: 14px 25px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+}
+  
+.link:hover, .link:active 
+{
+    background-color: blue;
+}
+
+.avatar-icon
+{
+    vertical-align: middle;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+  }
+
+
+  .server-select {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    height: 57px;
+    padding: 10px 38px 10px 16px;
+    background: #dae0e5 url("select-arrows.svg") no-repeat right 16px center;
+    background-size: 10px;
+    transition: border-color .1s ease-in-out,box-shadow .1s ease-in-out;
+    border: 1px solid #ddd;
+    border-radius: 3px;
+}
+.server-select:hover {
+    border: 1px solid #999;
+}
+.server-select:focus {
+    border: 1px solid #999;
+    box-shadow: 0 3px 5px 0 rgba(0,0,0,.2);
+    outline: none;
+}
+/* remove default arrow in IE */
+.server-select::-ms-expand {
+    display:none;
+}
+
+
+.server-select {
+    font-family: "Source Sans Pro", sans-serif;
+    font-size: 1.6rem;
+}
+
+p {
+    font-size:21px;
+    color:red;
+  }
+.go-to-dahsboard-btn {
+  display: inline-block;
+  border-radius: 4px;
+  background-color: #0004f8;
+  border: none;
+  color: #FFFFFF;
+  text-align: center;
+  font-size: 28px;
+  padding: 20px;
+  width: 330px;
+  transition: all 0.5s;
+  cursor: pointer;
+  margin: 5px;
+}
+
+.go-to-dahsboard-btn span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+
+.go-to-dahsboard-btn span:after {
+  content: '\00bb';
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: 0.5s;
+}
+
+.go-to-dahsboard-btn:hover span {
+  padding-right: 25px;
+}
+
+.go-to-dahsboard-btn:hover span:after {
+  opacity: 1;
+  right: 0;
+}
+
+.server-select-div {
+    height: 200px;
+    padding: 30px;
+}
+
