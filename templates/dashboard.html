@@ -1,0 +1,59 @@
+
+{% extends "/layout.html" %}
+
+{% block title %}
+    {{ server_name }}
+{% endblock %}
+
+{% block styles %}
+<link rel="stylesheet" href="/static/css/index.css">
+<link rel="stylesheet" href="/static/css/avatarimg.css">
+<link rel="stylesheet" href="/static/css/dashboard.css">
+<script type="text/javascript" src="/static/js/dashboard.js"></script>
+{% endblock %}
+
+{% block main %}
+
+
+
+{% if get_flashed_messages() %}
+<header>
+    <div class="alert alert-primary border text-center" style="width: 960px;" role="alert">
+        {{ get_flashed_messages() | join(" ") }}
+    </div>
+</header>
+{% endif %}
+<div class="div2">
+<div class="form">
+    <div>
+        <p>Select channel and press download to download last 10,000 messages</p>
+    </div>
+
+    <form name="file" method="post" onsubmit="return valid_index_form()">
+
+<div class="channel-select-div">
+
+    <select class="server-select" id="selected_channel" name="channel">
+
+        
+        <option value="" disabled selected>Select channel</option>
+
+        {% for i in channels %}
+    
+        <option value={{ channels[i]["id"] }}>{{ channels[i]["name"]}}</option>
+    
+        {% endfor %}
+    </select>
+    <p class="select_error" id="select_error"></p>
+</div>
+
+    <button class="download_button" type="submit">Download</button>
+
+    </form>
+
+</div>
+</div>
+
+
+
+{% endblock %}

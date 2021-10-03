@@ -1,0 +1,22 @@
+
+{% extends "/layout.html" %}
+
+{% block title %}
+    Error
+{% endblock %}
+
+{% block styles %}
+<link rel="stylesheet" href="/static/css/avatarimg.css">
+{% endblock %}
+
+{% block main %}
+<div style="width: 100%;">
+<h1  style="color: rgb(255, 0, 0);">{{ message }} -- <a href="/">Index/Login</a></h1>
+</div>
+
+<img src="/static/img/error.png" style="width: 80%; height: 80%;">
+
+
+
+
+{% endblock %}

@@ -1,0 +1,47 @@
+
+{% extends "/layout.html" %}
+
+{% block title %}
+    Index
+{% endblock %}
+
+{% block styles %}
+<link rel="stylesheet" href="static/css/index.css">
+<link rel="stylesheet" href="static/css/avatarimg.css">
+<script type="text/javascript" src="static/js/index.js"></script>
+{% endblock %}
+
+{% block main %}
+
+
+<div class="div2">
+<div class="form">
+<form action="/" method="post" onsubmit="return valid_index_form()">
+
+<div class="server-select-div">
+<select class="server-select" id="selected_server" name="server">
+    <option value="" disabled selected>Select server</option>
+
+    {% for i in servers %}
+
+    <option value={{ servers[i]["id"] }}>{{ servers[i]["name"]}}</option>
+
+    {% endfor %}
+
+</select>
+<p class="select_error" id="select_error"></p>
+</div>
+
+<button class="go-to-dahsboard-btn" type="submit" style="vertical-align:middle"><span>Go to dashboard </span></button>
+
+</form>
+</div>
+
+<div>
+<p>Note: Shown servers is [Mutual with bot] & [you have ADMINISTRATOR permission in it] </p>
+</div>
+</div>
+
+
+
+{% endblock %}

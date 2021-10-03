@@ -1,0 +1,25 @@
+
+{% extends "/layout.html" %}
+
+{% block title %}
+    Log In
+{% endblock %}
+
+{% block styles %}
+
+<link rel="stylesheet" href="static/css/login.css">
+
+{% endblock %}
+{% block main %}
+
+
+    <div class="login-div">
+        <img src="/static/img/chat-log-logo.png" style="width: 150px;height: 150px;">
+    
+        <form action='/login' method="post">
+            <div class="wrapper-buttons">
+                <button class="blue-button" type="submit"><img src="/static/img/discord-logo-png2.png" style="width: 30px;height: 30px;"> Log In</button>
+            </div>
+        </form>
+    </div>
+{% endblock %}
