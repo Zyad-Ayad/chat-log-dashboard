@@ -55,7 +55,7 @@ def login():
         return render_template("login.html")
     
     if request.method == "POST":
-        return redirect("https://discord.com/api/oauth2/authorize?client_id=879273611603619881&redirect_uri=http%3A%2F%2Flocalhost%3A5000%2Floggedin&response_type=code&scope=identify%20guilds")
+        return redirect("https://discord.com/api/oauth2/authorize?client_id=879273611603619881&redirect_uri=https%3A%2F%2Fchat-log-dashboard.herokuapp.com%2Floggedin&response_type=code&scope=identify%20guilds")
 
 @app.route('/loggedin')
 def loggedin():
