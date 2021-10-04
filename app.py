@@ -72,7 +72,7 @@ def loggedin():
     user = get_user_data(auth_key)
     if user == "ERROR: 2":
         session.clear()
-        return apology("Couldn't get user data. Please re-login", session["user"])
+        return apology("Couldn't get user data. Please re-login")
 
     session["user_id"] = user["id"]
     session["user"] = user
@@ -80,7 +80,7 @@ def loggedin():
 
     user_guilds = get_user_guilds(auth_key)
     if user_guilds == "ERROR: 3":
-        return apology("Couldn't get user_guilds data. Please re-login", True)
+        return apology("Couldn't get user_guilds data. Please re-login")
 
     session["guilds"] = user_guilds
     return redirect('/')
