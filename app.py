@@ -80,7 +80,7 @@ def loggedin():
 
     user_guilds = get_user_guilds(auth_key)
     if user_guilds == "ERROR: 3":
-        return apology("Couldn't get user_guilds data. Please re-login")
+        return apology("Couldn't get user_guilds data. Please re-login", session["user"])
 
     session["guilds"] = user_guilds
     return redirect('/')
