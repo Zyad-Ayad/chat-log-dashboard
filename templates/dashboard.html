@@ -2,7 +2,7 @@
 {% extends "/layout.html" %}
 
 {% block title %}
-    {{ server_name }}
+    {{ server["name"] }}
 {% endblock %}
 
 {% block styles %}
@@ -52,6 +52,19 @@
     </form>
 
 </div>
+</div>
+<div style="height: 50px;">
+1
+</div>
+<div class="div3">
+    <div style="position: relative; align-content: center;"><h3>{{ server["name"] }}</h3></div>
+    {% if server["icon"] != None %}
+    <img style="float: left; width: 50px; height: 50px;" src="https://cdn.discordapp.com/icons/{{ server["id"] }}/{{ server["icon"] }}.png?size=96">
+    {% else %}
+    <img style="float: left;" src="/static/img/no_guild_img.png">
+    {% endif %}
+
+
 </div>
 
 
