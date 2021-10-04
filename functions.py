@@ -2,8 +2,8 @@ from flask import redirect, render_template, request, session
 import requests
 
 
-def apology(message, users):
-    return render_template("error.html", message=message, users=users)
+def apology(message, user):
+    return render_template("error.html", message=message, user=user)
 
 
 
