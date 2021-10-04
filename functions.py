@@ -10,7 +10,7 @@ def apology(message, user):
 url = 'https://discord.com/api/oauth2/token'
 CLIENT_ID = '879273611603619881'
 CLIENT_SECRET = 'HNvZD6ymlx8b5-BFtLvv8LTihQT8CNQw'
-REDIRECT_URI = 'http://localhost:5000/loggedin'
+REDIRECT_URI = 'https://chat-log-dashboard.herokuapp.com/loggedin'
 bot_token = "ODc5MjczNjExNjAzNjE5ODgx.YSNVXQ.KiKNaFWWQRvq0Q5zNLy_b7Z41ZA"
 
 
