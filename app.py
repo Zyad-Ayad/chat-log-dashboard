@@ -101,7 +101,7 @@ def logout():
 def dashboard(server_id):
     if request.method == "GET":
         if session["guilds"].get(server_id) is None:
-            return apology("Couldn't open this server dashboard.!\nDo you have [MANAGE_GUILD] permission in this server ?", user=session["user"])
+            return apology("Couldn't open this server dashboard.!\nDo you have [ADMINISTRATOR] permission in this server ?", user=session["user"])
         else:
 
             channels = get_channels(server_id)
