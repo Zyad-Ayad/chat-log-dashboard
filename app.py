@@ -1,6 +1,6 @@
 from flask import Flask, redirect, render_template, request, session, flash
 from datetime import timedelta
-from functions import apology, auth, get_user_data, get_user_guilds, get_channels
+from functions import apology, auth, get_user_data, get_user_guilds, get_channels, update_guilds
 from functools import wraps
 from flask_session import Session
 
@@ -25,6 +25,8 @@ def login_required(f):
     """
     @wraps(f)
     def decorated_function(*args, **kwargs):
+        if session.get("user") != None and session.get("guilds") == None:
+            session["guilds"] = update_guilds(f'{session["user"]["token_type"]} {session["user"]["access_token"]}')
         if session.get("user_id") is None or session.get("user") is None or session.get("guilds") is None:
             return redirect("/login")
         return f(*args, **kwargs)
@@ -34,6 +36,7 @@ def login_required(f):
 @app.route("/", methods=["GET", "POST"])
 @login_required
 def index():
+    session["guilds"] = update_guilds(f'{session["user"]["token_type"]} {session["user"]["access_token"]}')
     if request.method == "GET":
         return render_template("index.html", user=session["user"], servers=session["guilds"])
     
@@ -107,7 +110,6 @@ def dashboard(server_id):
             channels = get_channels(server_id)
             server = session["guilds"][server_id]
             return render_template("dashboard.html", user=session["user"], channels=channels, server=server)
-
     
     if request.method == "POST":
         flash("This future is OFF now!")
@@ -125,4 +127,4 @@ def dashboard1():
 
 
 if __name__ == '__main__':
-    app.run(debug=True)
+    app.run()
