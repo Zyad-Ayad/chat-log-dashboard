@@ -62,12 +62,12 @@ def loggedin():
     code = request.args.get("code")
     if not code:
         session.clear()
-        return apology("No codes provided! please use login button", session["user"])
+        return apology("No codes provided! please use login button")
     else:
         auth_key = auth(code)
         if auth_key == "ERROR: 1":
             session.clear()
-            return apology("Couldn't get auth token. Please re-login", session["user"])
+            return apology("Couldn't get auth token. Please re-login")
 
     user = get_user_data(auth_key)
     if user == "ERROR: 2":
