@@ -13,6 +13,7 @@ app = Flask(__name__)
 app.config["TEMPLATES_AUTO_RELOAD"] = True
 app.config['SECRET_KEY'] = "@#$@$#123$FDGFDT$%%Rkr ewr ewrefdsqwe2 s"
 app.config['PERMANENT_SESSION_LIFETIME'] =  timedelta(minutes=30)
+app.config['SESSION_COOKIE_NAME'] = "my_session"
 app.url_map.strict_slashes = False
 
 users = {}
