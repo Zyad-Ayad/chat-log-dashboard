@@ -1,4 +1,6 @@
 Flask
 requests
 datetime
+Flask-session
 gunicorn
+redis
