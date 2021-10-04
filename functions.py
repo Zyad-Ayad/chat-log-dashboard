@@ -14,11 +14,6 @@ REDIRECT_URI = 'http://localhost:5000/loggedin'
 bot_token = "ODc5MjczNjExNjAzNjE5ODgx.YSNVXQ.KiKNaFWWQRvq0Q5zNLy_b7Z41ZA"
 
 
-def update_guilds(auth):
-    updated_guilds = get_user_guilds(auth)
-    return updated_guilds
-
-
 
 def auth(code):
 
