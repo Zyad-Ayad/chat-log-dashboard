@@ -35,13 +35,13 @@
             <div class="collapse navbar-collapse" id="navbar">
                 
 
-                {% if session.user_id %}
+                {% if session.user %}
                     <ul class="navbar-nav ml-auto mt-2">
                         
 <div class="navigation">
   
 	<a class="button" href="/logout">
-  	<img src="https://cdn.discordapp.com/avatars/{{session['user_id']}}/{{ users[session['user_id']]['avatar'] }}">
+  	<img src="https://cdn.discordapp.com/avatars/{{session['user_id']}}/{{ user['avatar'] }}">
   
   <div class="logout">LOGOUT</div>
 
