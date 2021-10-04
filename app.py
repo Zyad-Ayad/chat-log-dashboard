@@ -105,8 +105,9 @@ def dashboard(server_id):
         else:
 
             channels = get_channels(server_id)
-            server_name = session["guilds"][server_id]["name"]
-            return render_template("dashboard.html", user=session["user"], channels=channels, server_name=server_name)
+            server = session["guilds"][server_id]
+            return render_template("dashboard.html", user=session["user"], channels=channels, server=server)
+
     
     if request.method == "POST":
         flash("This future is OFF now!")
