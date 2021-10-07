@@ -33,8 +33,10 @@
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbar">
-                
-
+		 <ul class="navbar-nav mr-auto mt-2">
+                    <li class="nav-item"><a class="nav-link" href="/help" target="_blank">Help</a></li>
+                    <li class="nav-item"><a class="nav-link" href="/">Index</a></li>
+                </ul>
                 {% if session.user and user %}
                     <ul class="navbar-nav ml-auto mt-2">
                         
