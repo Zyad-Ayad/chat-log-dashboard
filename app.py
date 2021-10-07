@@ -95,6 +95,10 @@ def logout():
     # Redirect user to login form
     return redirect("/")
 
+@app.route("/help")
+def help():
+    return render_template("help.html")
+
 
 @app.route("/dashboard/<server_id>", methods=["GET", "POST"])
 @login_required
